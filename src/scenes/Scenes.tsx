@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Route, Switch, HashRouter } from "react-router-dom";
+// import { Route, Switch, HashRouter } from "react-router-dom";
 import Login from "./login/Login";
 
 const exampleUser = {
-  name: 1,
+  name: "Jose F",
   profile: "F1"
 };
 
@@ -11,7 +11,7 @@ class Scenes extends React.Component {
   render() {
     return (
       <div className="scenes-container">
-        <Login name={1} />
+        <Login name={exampleUser.name} profile={exampleUser.profile} />
       </div>
     );
   }

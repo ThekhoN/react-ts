@@ -1,11 +1,11 @@
 import * as React from "react";
 
-interface UserProps {
+interface IUserProps {
   name: string;
   profile: string;
 }
 
-class Login extends React.Component<UserProps, {}> {
+class Login extends React.Component<IUserProps, {}> {
   render() {
     console.log("this.props: ", this.props);
     return <div>Login: {this.props.name}</div>;
