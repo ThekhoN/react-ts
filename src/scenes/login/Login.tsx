@@ -18,6 +18,14 @@ const Example: React.SFC<ExampleProps> = props => {
 
 const data = { name: "gone case!" };
 
+interface NumberDisplayerProps {
+  number: number;
+}
+
+const NumberDisplayer: React.SFC<NumberDisplayerProps> = props => (
+  <div>Number: {props.number}</div>
+);
+
 class Login extends React.Component<IUserProps, {}> {
   state = {
     loading: true
@@ -26,6 +34,7 @@ class Login extends React.Component<IUserProps, {}> {
     const ToggleWithLoading = withLoading(Toggle);
     return (
       <div>
+        <NumberDisplayer number={2} />
         <Example {...data} />
         <ToggleWithLoading loading={this.state.loading} />
         <React.Fragment>Login: {this.props.name}</React.Fragment>

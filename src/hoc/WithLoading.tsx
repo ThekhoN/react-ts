@@ -19,7 +19,6 @@ interface WithLoadingProps {
 const withLoading = <P extends object>(Component: React.ComponentType<P>) => {
   return class WithLoading extends React.Component<P & WithLoadingProps> {
     render() {
-      console.log("this.props inside withLoading: ", this.props);
       const { loading, ...props } = this.props as WithLoadingProps;
       return loading ? <h2>Loading...</h2> : <Component {...props} />;
     }
