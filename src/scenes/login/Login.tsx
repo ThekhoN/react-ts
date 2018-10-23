@@ -1,7 +1,4 @@
 import * as React from "react";
-// import Switch from "../../components/Switch";
-import Toggle from "../../components/Toggle";
-import withLoading from "../../hoc/WithLoading";
 
 interface IUserProps {
   name: string;
@@ -31,12 +28,10 @@ class Login extends React.Component<IUserProps, {}> {
     loading: true
   };
   render() {
-    const ToggleWithLoading = withLoading(Toggle);
     return (
       <div>
         <NumberDisplayer number={2} />
         <Example {...data} />
-        <ToggleWithLoading loading={this.state.loading} />
         <React.Fragment>Login: {this.props.name}</React.Fragment>
       </div>
     );

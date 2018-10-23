@@ -3,7 +3,6 @@ import URL from "../../services/url";
 import axios from "axios";
 import withLoading from "../../hoc/WithLoading";
 import FruitsList from "./components/FruitsList";
-// import LoadingWrapper from "../../components/LoadingWrapper";
 import SearchInput from "../../components/SearchInput";
 
 export interface IFruitDetails {
@@ -57,6 +56,9 @@ class Fruits extends React.Component<{}, IFruitsState> {
     } else {
       this.setState({ data: this.state.allData });
     }
+  };
+  onButtonClick = () => {
+    console.log("Button was clicked!");
   };
   render() {
     return (
