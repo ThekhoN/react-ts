@@ -6,6 +6,7 @@ import Login from "./login/Login";
 import Counter from "../components/Counter";
 import createHistory from "history/createBrowserHistory";
 import Nav from "../components/Nav/Nav";
+import PeriodSelector from "../components/PeriodSelector";
 
 const history = createHistory();
 
@@ -17,6 +18,7 @@ class Scenes extends React.Component {
           <div>
             <Route component={Nav} />
             <Route exact={true} path="/" component={Login} />
+            <Route path="/period-selector" component={PeriodSelector} />
             <Route path="/search" component={Fruits} />
             <Route path="/counter" component={Counter} />
             <Route path="/toggle-app" component={ToggleApp} />
